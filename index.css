@@ -1,0 +1,71 @@
+html, body {
+    background-color: #123A13;
+}
+.bulletin {
+width: 1200px; /* needed to make a nox*/
+  height: 500px; /* needed to make a nox*/
+  background-color: #237026;
+  align-items: center;
+text-align: center;
+padding: 20px;
+}
+.flexbox{ /* Parent for flexbox to center bulletin*/
+display: flex; 
+justify-content: center;
+align-items: center;
+position: absolute;
+height: 100%; /* needed to assign flebox a size*/
+width: 100%; /* needed to assign flebox a size*/
+}
+
+h1 {
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+font-size: 32px;
+position: absolute;
+left: 50%;/* centers text by going left*/
+transform: translateX(-50%); /* centers text by cancelling left*/
+color: #FAF4D3;
+}
+#anchornote {
+  height:100px;
+  width: 120px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 15;
+  cursor: pointer;
+  border: 2px solid #123D20;
+  background-color: #36d36a;
+  touch-action: none;
+}
+.draggable {
+  height:100px;
+  width: 120px;
+  position: absolute;
+  z-index: 30;
+  cursor: pointer;
+  border: 2px solid #123D20;
+  touch-action: none;
+}
+.dark-mode{
+  height: 100%; /* needed to assign flebox a size*/
+width: 100%; /* needed to assign flebox a size*/
+background-color: brown;
+z-index:10;
+}
+@media (max-width: 750px) {
+  .bulletin {
+    width: 90vw; /* shrinks the board to 90% of the phone's screen width */
+    height: 300px; /* shorter height so it fits without scrolling */
+  }
+
+  h1 {
+    font-size: 22px; /* smaller heading so it doesn't wrap awkwardly */
+  }
+
+  #anchornote,
+  .draggable {
+    height: 70px; /* slightly smaller notes so more fit on a small screen */
+    width: 90px;
+  }
+}
