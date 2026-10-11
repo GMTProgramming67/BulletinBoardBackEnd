@@ -8,7 +8,7 @@ width: 1200px; /* needed to make a nox*/
   align-items: center;
 text-align: center;
 padding: 20px;
-position: absolute;
+position: fixed;
 }
 .flexbox{ /* Parent for flexbox to center bulletin*/
 display: flex; 
